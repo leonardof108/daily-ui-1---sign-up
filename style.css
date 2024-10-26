@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(300deg, #888, #aaa, #ccc);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font: 1.5rem "Poppins", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  border-radius: 40px;
+  width: min(1000px, 90vw);
+  min-height: 80%;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-basis: 50%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+main > section:first-child {
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 40px 0 0 40px;
+}
+
+main > section:last-child {
+  position: relative;
+  background-color: #000;
+  border-radius: 0 40px 40px 0;
+}
+
+main > section:first-child > header {
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+}
+
+main > section:first-child > header > h1 {
+  font-size: inherit;
+}
+
+main > section:last-child > header {
+  text-align: end;
+  height: 15%;
+  padding: 1em;
+}
+
+.main-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.main-container > span {
+  margin-bottom: 1em;
+}
+
+.main-container > span > h2 {
+  font-size: 3.5em;
+  margin-bottom: -0.2em;
+}
+
+.main-container > span > p {
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
+.main-container > form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.main-container > form > p {
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
+.lines {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.lines > p {
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
+.lines > p::before,
+.lines > p::after {
+  content: "";
+  height: 1px;
+  width: 75px;
+  background-color: #aaa;
+  position: absolute;
+}
+
+.lines > p::before {
+  left: -7.5em;
+  top: 0.7em;
+}
+.lines > p::after {
+  right: -7.5em;
+  top: 0.7em;
+}
+.sign-google-btn {
+  border: 1px solid #aaa;
+  background-color: transparent;
+  padding: 1.25em 0.5em;
+  border-radius: 0.5em;
+  width: min(50em, 75%);
+  font-weight: bolder;
+  font-size: 0.5em;
+  margin-bottom: 2em;
+}
+
+.log-btn {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 1.25em 0.5em;
+  border-radius: 50px;
+  width: min(50em, 75%);
+  font-weight: bolder;
+  font-size: 0.5em;
+  margin-bottom: 2em;
+}
+
+.main-container > form > input {
+  border: 1px solid #aaa;
+  background-color: transparent;
+  padding: 1.25em 0.5em;
+  border-radius: 0.5em;
+  width: min(50em, 75%);
+  font-weight: bolder;
+  font-size: 0.5em;
+}
+.main-container > form > input:first-of-type {
+  margin-bottom: 2em;
+}
+.main-container > form > input:last-of-type {
+  margin-bottom: 1em;
+}
+
+.main-container > form > input::placeholder {
+  color: #000;
+  padding: 0.5em;
+}
+
+.main-container > form > input:active::placeholder,
+.main-container > form > input:focus::placeholder {
+  color: transparent;
+}
+
+.main-container > form > a {
+  width: min(50em, 75%);
+  text-align: end;
+  font-size: 0.5em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.main-container > form a:any-link {
+  color: #0084ff;
+  text-decoration: none;
+}
+
+.main-container > p:last-of-type {
+  font-size: 0.5em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.main-container > p:last-of-type > a:any-link {
+  color: #0084ff;
+  text-decoration: none;
+}
+
+.sign-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  padding: 1em 1.5em;
+}
+
+.join-btn {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 1em 1.5em;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.img-controls {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  width: 85px;
+}
+:is(:first-child, :last-child) .img-controls > button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.75em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.img-controls > button:first-child::before {
+  content: "🡰";
+}
+.img-controls > button:last-child::before {
+  content: "🡲";
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #aaa;
+  border-radius: 50px;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+}
+
+:is(.dropbtn, .sign-google-btn):is(:hover, :focus) {
+  background-color: hsla(0, 0%, 100%, 0.247);
+  transition: all 0.2s ease-in-out;
+}
+
+figure img {
+  width: 150%;
+  height: auto;
+  border-radius: 0 0 40px 0;
+}
+
+figure {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.dropbtn {
+    font-weight: bold;
+}
+.dropbtn img {
+    width: 1.5em;
+    height: 0.8em;
+}
+.dropbtn::after {
+  content: " ᐯ";
+}
